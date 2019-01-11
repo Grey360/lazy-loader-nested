@@ -1,0 +1,25 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { SecondComponent } from './second.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: SecondComponent,
+    redirectTo: '2/3',
+    pathMatch: 'full'
+  },
+  {
+    path: ':secondnumber/:thirdnumber',
+    component: SecondComponent,
+    // children: [
+    //   { path: 'third', loadChildren}
+    // ]
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class SecondRoutingModule { }
