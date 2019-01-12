@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { FirstRoutingModule } from './first-routing.module';
 import { FirstComponent } from './first.component';
+import { SecondModule } from './second/second.module';
 
 @NgModule({
   declarations: [FirstComponent],
   imports: [
     CommonModule,
-    FirstRoutingModule
+    FirstRoutingModule,
+    SecondModule
   ],
   exports: [FirstComponent]
 })

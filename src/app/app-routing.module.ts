@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: './first/first.module#FirstModule'
   },
   {
+    path: 'first/:firstnumber/second',
+    loadChildren: './first/second/second.module#SecondModule'
+  },
+  {
     path: '',
     redirectTo: 'first',
     pathMatch: 'full',

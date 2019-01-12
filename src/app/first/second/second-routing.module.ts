@@ -11,10 +11,7 @@ const routes: Routes = [
   },
   {
     path: ':secondnumber/:thirdnumber',
-    component: SecondComponent,
-    // children: [
-    //   { path: 'third', loadChildren}
-    // ]
+    component: SecondComponent
   }
 ];
 

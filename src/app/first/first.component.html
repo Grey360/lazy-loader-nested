@@ -1,3 +1,5 @@
 <p>
-  first works!
+  first!
+  <button (click)="toggleSecond()">{{buttonText}}</button>
+  <app-second *ngIf="showSecond"></app-second>
 </p>
