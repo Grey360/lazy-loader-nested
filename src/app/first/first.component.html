@@ -1,3 +1,10 @@
 <p>
-  first works!
+  <input type="text" [(ngModel)]="first">
+  <button (click)="revealSibling()">Reveal sibling!</button>
+  <ng-container *ngIf="!showSibling">
+    first works!
+  </ng-container>
+  <ng-container *ngIf="showSibling">
+    <app-first-sibling [first]="first"></app-first-sibling>
+  </ng-container>
 </p>
