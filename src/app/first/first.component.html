@@ -1,4 +1,4 @@
-<p>
+<div>
   <input type="text" [(ngModel)]="first">
   <button (click)="revealSibling()">Reveal sibling!</button>
   <ng-container *ngIf="!showSibling">
@@ -7,4 +7,7 @@
   <ng-container *ngIf="showSibling">
     <app-first-sibling [first]="first"></app-first-sibling>
   </ng-container>
-</p>
+  first!
+  <button (click)="toggleSecond()">{{buttonText}}</button>
+  <app-second *ngIf="showSecond"></app-second>
+</div>

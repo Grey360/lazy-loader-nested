@@ -11,10 +11,7 @@ const routes: Routes = [
   },
   {
     path: ':firstnumber',
-    component: FirstComponent,
-    children: [
-      { path: 'second', loadChildren: './second/second.module#SecondModule' }
-    ]
+    component: FirstComponent
   }
 ];
 

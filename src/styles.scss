@@ -1,12 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loading-phrases,
+.loading_screen_spinner {
+  backface-visibility:Í hidden;
+  perspective: 1000
+}
+
+@keyframes loading_screen_animation_spinning {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes loading_screen_animation_move {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0)
+  }
+
+  18%,
+  2% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 0
+  }
+
+  22%,
+  38% {
+    opacity: 1;
+    transform: translate3d(0, -150%, 0)
+  }
+
+  42%,
+  58% {
+    opacity: 1;
+    transform: translate3d(0, -300%, 0)
+  }
+
+  62%,
+  78% {
+    opacity: 1;
+    transform: translate3d(0, -450%, 0)
+  }
+
+  82%,
+  98% {
+    opacity: 1;
+    transform: translate3d(0, -600%, 0)
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -600%, 0)
+  }
+}
+
+.loading_screen {
+  background: linear-gradient(to bottom, #f9f9f9 10%, #eeeff3 100%);
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10000
+}
+
+.loading_screen_center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  margin-left: -250px;
+  margin-top: -26px
+}
+
+.loading_screen_spinner {
+  height: 52px;
+  width: 52px;
+  margin: 0 auto;
+  display: block;
+  animation: loading_screen_animation_spinning .8s linear infinite
+}
+
+.loading_screen_logo_wrapper {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center
+}
+
+.loading_screen_logo {
+  width: 102px;
+  height: 21px
+}
+
+.loading-phrases-container {
+  height: 18px;
+  margin-top: 18px;
+  overflow-y: hidden
+}
+
+.loading-phrases {
+  animation: loading_screen_animation_move 25s infinite;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+  width: 100%;
+  text-align: center;
+  height: 18px;
+  overflow-y: visible
+}
+
+.loading-phrase {
+  height: 18px;
+  margin-bottom: 9px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #646F79
 }
