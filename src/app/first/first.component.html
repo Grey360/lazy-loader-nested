@@ -1,13 +1,23 @@
-<div>
-  <input type="text" [(ngModel)]="first">
-  <button (click)="revealSibling()">Reveal sibling!</button>
-  <ng-container *ngIf="!showSibling">
-    first works!
-  </ng-container>
-  <ng-container *ngIf="showSibling">
-    <app-first-sibling [first]="first"></app-first-sibling>
-  </ng-container>
-  first!
-  <button (click)="toggleSecond()">{{buttonText}}</button>
-  <app-second *ngIf="showSecond"></app-second>
+<div class="row">
+  <input type="text" [(ngModel)]="first" class="form-control">
+  <div class="row">
+    <div class="row">
+      <button (click)="revealSibling()" class="btn btn-primary">Reveal sibling!</button>
+    </div>
+    
+    <ng-container *ngIf="!showSibling">
+      <div class="row">
+        <input type="file" name="file" id="file" fromControlName="file">
+      </div>
+    </ng-container>
+    <div class="row">
+      <ng-container *ngIf="showSibling">
+        <app-first-sibling [first]="first"></app-first-sibling>
+      </ng-container>
+    </div>
+  </div>  
+  <div class="row">
+    <button (click)="toggleSecond()" class="btn btn-secondary">{{buttonText}}</button>
+    <app-second *ngIf="showSecond"></app-second>
+  </div>
 </div>

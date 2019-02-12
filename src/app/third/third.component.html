@@ -1,0 +1,31 @@
+<form [formGroup]="formGroup" class="form-group">
+  <label for="firstname">Firstname</label>
+  <input name="firstname" id="firstname" class="form-control" formControlName="firstname">
+  <label for="lastname">Lastname</label>
+  <input name="lastname" id="lastname" class="form-control" formControlName="lastname">
+</form>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Firstname
+        </th>
+        <th>
+          Lastname
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            {{ formGroup.controls.firstname.value }}
+        </td>
+        <td>
+            {{ lastnameCtrl.value }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: './first/second/second.module#SecondModule'
   },
   {
+    path: 'third',
+    loadChildren: './third/third.module#ThirdModule'
+  },
+  {
     path: '',
     redirectTo: 'first',
     pathMatch: 'full',
