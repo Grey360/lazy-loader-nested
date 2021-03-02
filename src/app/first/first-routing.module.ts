@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { FirstComponent } from './first.component';
 
 const routes: Routes = [
-  { 
+  {
     path: '',
     component: FirstComponent,
     redirectTo: '1',
-    pathMatch: 'full' 
+    pathMatch: 'full'
   },
   {
     path: ':firstnumber',

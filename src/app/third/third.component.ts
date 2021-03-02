@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
   styleUrls: ['./third.component.scss']
 })
 export class ThirdComponent implements OnInit {
-  
+
   formBuilder: FormBuilder;
   formGroup: FormGroup;
   firstnameCtrl: FormControl;

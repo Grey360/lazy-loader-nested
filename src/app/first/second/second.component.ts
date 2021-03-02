@@ -16,7 +16,7 @@ export class SecondComponent implements OnInit, OnDestroy {
     private testApiService: TestApiCallService
   ) {
     console.log(this.router);
-    console.log(this.route)
+    console.log(this.route);
   }
 
   ngOnInit() {

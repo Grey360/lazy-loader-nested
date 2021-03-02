@@ -32,7 +32,7 @@ export class FirstComponent implements OnInit {
   revealSibling() {
     this.showSibling = !this.showSibling;
   }
-  
+
   testShare() {
     this.testApiService.changeShare(this.data);
     this.testApiService.currentData.subscribe(data => {

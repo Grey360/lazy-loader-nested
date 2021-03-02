@@ -8,16 +8,16 @@ import { RouterModule } from '@angular/router';
 import { ServicesModule } from './services/services.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule,
-    AppRoutingModule,
-    ServicesModule
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        RouterModule,
+        AppRoutingModule,
+        ServicesModule
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

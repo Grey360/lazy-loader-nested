@@ -4,26 +4,26 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class TestApiCallService {
 
-  private data = new BehaviorSubject('Jeremy');
-  currentData = this.data.asObservable();
+    private data = new BehaviorSubject('Jeremy');
+    currentData = this.data.asObservable();
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
-  changeShare(data: string) {
-    this.data.next(data);
-  }
+    changeShare(data: string) {
+        this.data.next(data);
+    }
 
-  get(): Observable<any> {
-    const url = environment.ENDPOINT;
-    return this.http.get(url);
-  }
+    get(): Observable<any> {
+        const url = environment.ENDPOINT;
+        return this.http.get(url);
+    }
 
-  post(): Observable<any> {
-    const url = environment.ENDPOINT;
-    return this.http.post(url, 'body');
-  }
+    post(): Observable<any> {
+        const url = environment.ENDPOINT;
+        return this.http.post(url, 'body');
+    }
 }
